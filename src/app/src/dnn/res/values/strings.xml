@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Feng Scanner v1.0</string>
+    <string name="select_title">Feng Scanner v1.0</string>
+    <string name="select_mau_1011">Mẫu giấy K10 - K11</string>
+    <string name="radio_mau_1011">Mẫu giấy K10 - K11</string>
+    <string name="select_mau_12">Mẫu giấy K12 - TN THPT 2025</string>
+    <string name="radio_mau_12">Mẫu giấy K12 - TN THPT 2025</string>
+</resources>

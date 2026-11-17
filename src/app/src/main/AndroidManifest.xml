@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.VIBRATE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="33" />
+
+    <application
+        android:name=".OmrApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:resizeableActivity="false"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OMRScanner"
+        tools:targetApi="34">
+
+        <!--
+          Toàn bộ app khóa DỨNG (portrait) — cảm biến xoay không được can thiệp:
+          - screenOrientation="portrait": cứng hướng màn hình, bỏ qua auto-rotate;
+          - configChanges: nếu hệ thống vẫn phát config change (multi-window,
+            foldable, uiMode…), activity KHÔNG recreate -> luồng camera không bị
+            ngắt/mất HUD.
+        -->
+        <!-- Màn chọn mẫu phiếu + cấu hình tên ảnh (launcher) -->
+        <activity
+            android:name=".TemplateSelectActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|uiMode|density"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|uiMode|density"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" />
+
+        <activity
+            android:name=".ResultActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|uiMode|density"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+    </application>
+</manifest>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Màn chọn mẫu — phong cách DARK đồng nhất với ScannerOnlyActivity:
+  nền #111418, chữ trắng, nhãn phụ xám nhạt, nút chính nền xanh lá.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#111418"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_title"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/select_subtitle"
+            android:textColor="#9AA4B2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/select_choose_template"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioSheetType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <RadioButton
+                android:id="@+id/radioMau1011"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#00E676"
+                android:padding="6dp"
+                android:text="@string/select_mau_1011"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/radioMau12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#00E676"
+                android:padding="6dp"
+                android:text="@string/select_mau_12"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/select_prefix_label"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtPrefix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:hint="@string/select_prefix_hint"
+            android:inputType="text"
+            android:maxLines="1"
+            android:fontFamily="monospace"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#6B7480" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#00E676"
+            android:text="@string/select_start"
+            android:textColor="#06210F"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,22 @@
+# Android & Gradle
+.gradle/
+**/.gradle/
+build/
+**/build/
+local.properties
+**/local.properties
+.idea/
+**/.idea/
+*.iml
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# GitHub file size limit (100MB)
+apk/FengScan-universal-debug.apk
+
+# OS
+.DS_Store
+Thumbs.db

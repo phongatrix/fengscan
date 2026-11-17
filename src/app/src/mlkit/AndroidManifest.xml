@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      Flavor có luồng "vào thẳng Google Scanner" (bỏ màn HUD camera):
+      activity này chỉ tồn tại ở source set dnn/mlkit nên phải khai báo
+      trong manifest của chính flavor đó.
+    -->
+    <application>
+        <activity
+            android:name=".ScannerOnlyActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|uiMode|density"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" />
+    </application>
+</manifest>
